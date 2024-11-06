@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLÃO QUEM FAZ MAIS GANHA </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <img src="img/Logo-Bolao.png" alt="Logo">
+        <h1> BOLÃO QUEM FAZ MAIS GANHA </h1>
+        
+    </header>
+    <div class="container">
+        
+        <form method="post" onsubmit="return false;">
+            <div class="esquerda">
+                <fieldset>
+                    <legend>Escolha até 20 números <br> e concorra ao prêmio !!!</legend>
+                    <p> *Cada jogo vai custar 10 reais</p>
+                    <div class="checkbox-grid">
+                        <script>
+                            for (let i = 1; i <= 60; i++) {
+                                document.write(`
+                                    <input type="checkbox" id="numero${i}" class="check" name="numeros" value="${i}" onclick="limitarSelecao()">
+                                    <label for="numero${i}" class="label-check">${i}</label>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </fieldset>
+            </div>
+        
+            <div class="direita">
+                <br><br> <br><br>
+                <h3>Aprenda a jogar:</h3>
+                <video class="video" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+
+                <br><br>  
+                <input type="text" class="form-input" placeholder="Nome" required /><br><br>
+                <input type="text" class="form-input" placeholder="Cidade" required /><br><br>
+                <input type="tel" class="form-input" placeholder="(XX)XXXXX-XXXX" oninput="mascaraTelefone(this)" required /><br><br>
+                
+                <button type="button" class="send-btn" onclick="salvarJogo()">Salvar Jogo</button>
+                <button type="button" class="send-btn" onclick="mostrarJogos()">Mostrar Jogos</button>
+                <button type="button" class="send-btn" onclick="desmarcarTodos()">Desmarcar Todos</button>
+                <button type="button" class="send-btn" onclick="enviarTodosJogos()">Enviar  </button>
+                
+                 
+                
+            </div>
+        </form>
+        
+
+    </div>
+    <footer>
+        <div class="icones">
+            
+            <h3> Entre em contato </h3>
+            
+            <a href="https://api.whatsapp.com/send?phone=5519982717180" target="_blank"> 
+                <img src="img/whatsapp_icon.png" alt="">
+            </a>
+        
+            <a href="https://www.instagram.com/quemfazmaisganha/profilecard/?igsh=MThlMHN1NnY5eGNieQ==" target="_blank">
+                <img src="img/instagram_icon.png" alt="">
+            </a>
+
+            <a href="galeria.html" class="link"> Ganhadores </a>
+            <a href="https://chat.whatsapp.com/IQBXn6bqcxpAWjDp1Sl8o6" class="link"> Entrar no grupo do Whatsapp</a>
+        </div>
+         
+    </footer>
+
+    <script src="script.js">  </script>
+
+</body>
+</html>

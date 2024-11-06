@@ -1,0 +1,306 @@
+        /* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    /*background: #1A1A40;
+    color: #A3C1DA; */
+    background-color: #2E8B57;
+    color: #0d2c1a;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;  
+}
+
+/*  Cabeçalho */
+header{
+    display: flex; 
+    flex-direction: row;
+    width: 90%;  
+    font-size: 25px;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center; 
+}
+header h1{
+    margin-right: auto;
+}
+header img{
+    margin-top: 2%;
+    margin-right: 3%;
+    padding-left: 6%;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+/* Container   */
+.container { 
+    display: flex; 
+    flex-direction: column;
+    width: 100%;  
+    padding-top: 50px;
+    text-align: center;  
+    
+}
+
+
+
+/* Formulario */
+form{
+    display: flex; 
+    flex-direction: row;
+    width: 90%;  
+    padding-top: 50px;
+    text-align: center;  
+    justify-items: center;
+    justify-content: center; 
+    
+}
+.direita{
+    float: right;
+    width: 100%; 
+}
+
+.esquerda{
+    float: left;
+    width: 100%; 
+}
+
+.form-input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+}
+
+.send-btn {
+    width: 45%;
+    padding: 15px;
+    /*     background-color: #7095b3; */
+    background-color: #0d2c1a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+fieldset{
+    border: none;
+    
+    
+}
+fieldset legend{
+    font-size: 26px;
+}
+.checkbox-grid input[type="checkbox"] {
+    display: none;  
+}
+
+.checkbox-grid input[type="checkbox"]:checked + label {
+    background-color: #104727;  
+}
+
+.label-check {
+    display: inline-flex;  
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+    width: 50px;  
+    height: 50px;  
+    border-radius: 5px;  
+    margin: 5px;  
+    cursor: pointer;  
+    background-color: #176437; 
+    color: white;  
+    font-weight: bold;  
+    transition: background-color 0.3s ease;  
+}
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    width: 70%;
+    
+    margin-left: 15%;
+    
+}
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.video{
+    margin-top: 1%;
+    height: auto;
+    width: 90%;
+}
+
+
+/* Rodapé  */
+footer{
+    display: flex; 
+    flex-direction: column; 
+    width: 90%;  
+    padding: 20px;
+    padding-top: 10px;
+    text-align: center; 
+    margin-bottom: 1.5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+footer .direita{
+    margin-bottom: auto;
+}
+.icones{
+    text-align: justify;
+}
+
+.icones img{
+    width: 40px;
+    height: 40px;
+}
+.link{
+    color: #0d2c1a;   
+    text-decoration: none;  
+    font-weight: bold;  
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+    margin-left: 20%;
+}
+/* Estilos da galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilos para títulos */
+.container h2 {
+    font-size: 24px;
+    color: #0d2c1a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para telas menores (dispositivos móveis) */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Um pouco de padding nas laterais para ajustar o conteúdo */
+    }
+
+    header {
+        flex-direction: column; /* Empilha o conteúdo do cabeçalho */
+        align-items: center; /* Centraliza o conteúdo */
+        text-align: center;
+    }
+    header img {
+        width: 150px; /* Reduz o tamanho da imagem */
+        height: 150px;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    header h1 {
+        font-size: 22px; /* Ajusta o tamanho da fonte */
+        margin: 0;
+    }
+
+    /* Ajusta a largura do container e centraliza */
+    .container {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    /* Ajusta o layout do formulário */
+    form {
+        flex-direction: column; /* Alinha os itens do formulário verticalmente */
+        width: 100%;
+        padding-top: 20px;
+    }
+    
+    .form-input {
+        width: 100%; /* Usa a largura completa no celular */
+    }
+
+    .send-btn {
+        width: 100%; /* Usa a largura completa */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Ajusta o layout da grid de checkboxes */
+    .checkbox-grid {
+        grid-template-columns: repeat(6, 1fr); /* Reduz o número de colunas */
+        width: 100%; /* Ajusta a largura */
+        margin-left: 0; /* Remove o deslocamento para a esquerda */
+    }
+
+    .label-check {
+        display: inline-flex;  
+        justify-content: center;  
+        align-items: center;  
+        text-align: center;  
+        width: 50px;  
+        height: 20px;  
+        border-radius: 5px;  
+        margin: 5px;  
+        cursor: pointer;  
+        background-color: #176437; 
+        color: white;  
+        font-weight: bold;  
+        transition: background-color 0.3s ease;  
+    }
+    
+    .video {
+        width: 100%; /* Ajusta a largura do vídeo */
+    }
+
+    footer {
+        width: 100%; /* Ajusta a largura do rodapé */
+        padding-top: 15px;
+    }
+
+    .icones {
+        text-align: center;  
+    }
+
+    .icones img {
+        width: 35px;
+        height: 35px;
+    }
+}
